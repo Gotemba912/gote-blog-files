@@ -1,0 +1,17 @@
+{
+    "content_panel": {
+      "type": "panel",
+      "clips_children": false,
+      "size": [ "100%", "100%" ],
+      "controls": [
+        {
+          "access_button@debug_screen.access_button": {
+          }
+        },
+        {
+          "special_render@debug_screen.special_render": {
+          }
+        }
+      ]
+    }
+}
