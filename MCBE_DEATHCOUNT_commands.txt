@@ -1,0 +1,20 @@
+・下準備(チャット欄で実行)
+
+- コマンドブロックのログ削除
+/gamerule commandblockoutput false
+
+- オブジェクト作成 (オブジェクト名や表示名は任意の名前でOK)
+/scoreboard objectives add death dummy DEATHCOUNT
+
+- setdisplay (表示する場所はsidebar以外でもOK)
+/scoreboard objectives setdisplay sidebar death
+
+
+・コマンドブロックに入力するコマンド(合計5個)
+※最初のコマンドは「反覆 無条件 常にアクティブ」、残り4個はすべて「チェーン 無条件 常にアクティブ」
+
+/tag @e[type=player] add death1
+/scoreboard player add @a[tag=!death1,tag=!death2] death 1
+/tag @a[tag=!death1] add death2
+/tag @a remove death1
+/tag @e[type=player] remove death2
